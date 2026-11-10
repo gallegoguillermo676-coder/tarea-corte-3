@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de tareas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="contenedor">
+        <header>
+            <p class="etiqueta">ORGANIZACIÓN PERSONAL</p>
+            <h1>Mis tareas</h1>
+            <p class="subtitulo">Organiza tus pendientes de forma sencilla.</p>
+        </header>
+
+        <form id="formulario-tarea">
+            <label for="titulo">Nueva tarea</label>
+            <div class="entrada">
+                <input id="titulo" name="titulo" type="text" maxlength="100"
+                       placeholder="¿Qué necesitas hacer?" required>
+                <button type="submit">Agregar</button>
+            </div>
+            <p id="mensaje" role="status"></p>
+        </form>
+
+        <section class="lista-seccion">
+            <div class="encabezado-lista">
+                <h2>Lista de pendientes</h2>
+                <span id="contador">0 tareas</span>
+            </div>
+            <ul id="lista-tareas"></ul>
+        </section>
+    </main>
+</body>
+</html>
