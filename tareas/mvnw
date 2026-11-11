@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+# Lanzador para Git Bash: usa el descargador incluido en mvnw.cmd.
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+if command -v cygpath >/dev/null 2>&1; then
+  WIN_DIR="$(cygpath -w "$SCRIPT_DIR")"
+  exec cmd.exe //c "\"$WIN_DIR\\mvnw.cmd\" $*"
+else
+  echo "Ejecuta mvnw.cmd desde CMD o PowerShell en Windows."
+  exit 1
+fi
